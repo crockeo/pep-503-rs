@@ -7,6 +7,9 @@ In its current form it's ~mostly copy/pasted from
 so that I can use it in other projects.
 In the future I would like to:
 
+- [ ] Improve the parsing API
+  - Maybe: move from `impl FromStr` to a dedicated `parse` func?
+  - Change the error type to be non-`()` so it's easier to use with `anyhow`.
 - [ ] Fix struct naming so that it aligns with the terms used by PEP503.
 - [ ] Change release parsing slightly:
   - Include a hash type when a hash is specified on the URI
