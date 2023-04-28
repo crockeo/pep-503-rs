@@ -3,6 +3,15 @@ use std::str::FromStr;
 
 use kuchiki::traits::TendrilSink;
 
+/// Implementation of the PEP-0503 `normalize` function.
+/// See: https://peps.python.org/pep-0503/#normalized-names
+pub fn normalize_project_name(project_name: &str) -> String {
+    project_name
+        .to_lowercase()
+        .replace("_", "-")
+        .replace(".", "-")
+}
+
 #[derive(Eq, Debug, PartialEq)]
 pub struct RootIndex {
     pub packages: Vec<String>,
