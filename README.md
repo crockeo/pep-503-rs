@@ -16,6 +16,12 @@ git = "https://github.com/crockeo/pep-503-rs"
 rev = "<HEAD of main>"
 ```
 
+And then in rust you can reference is at `pep_503`:
+
+```rust
+use pep_503::Repository;
+```
+
 You can also use `branch = "main"` if you want to track changes.
 
 ## License

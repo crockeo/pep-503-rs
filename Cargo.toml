@@ -7,3 +7,6 @@ edition = "2021"
 
 [dependencies]
 kuchiki = "0.8.1"
+
+[dev-dependencies]
+pretty_assertions = "1.3.0"
