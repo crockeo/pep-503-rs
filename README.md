@@ -2,6 +2,23 @@
 
 A Rusty implementation of [PEP-503](https://peps.python.org/pep-0503/).
 
+In its current form it's ~mostly copy/pasted from
+[pyproxide's implementation](https://github.com/crockeo/pyproxide/blob/4355045e06fd8a6d963f9683173ac2f7d36b894a/src/pep_503.rs)
+so that I can use it in other projects.
+In the future I would like to:
+
+- [ ] Fix struct naming so that it aligns with the terms used by PEP503.
+- [ ] Change release parsing slightly:
+  - Include a hash type when a hash is specified on the URI
+    instead of including it on the URI.
+  - Replace `has_gpg` with an `Option<String>` or `Option<Url>`
+    that points to the `.asc` file.
+- [ ] Add documentation for each of the types,
+      their use,
+      and their corresponding PEP503 concept.
+- [ ] Replace kuchiki with an actively-maintained [html5ever](https://github.com/servo/html5ever) sink.
+- [ ] Fuzz testing to find the many bugs I've included :)
+
 ## Installation
 
 `pep-503-rs` is not yet uploaded to [crates.io](https://crates.io).
@@ -19,7 +36,8 @@ rev = "<HEAD of main>"
 And then in rust you can reference is at `pep_503`:
 
 ```rust
-use pep_503::Repository;
+use pep_503::RootIndex;
+use pep_503::PackageIndex;
 ```
 
 You can also use `branch = "main"` if you want to track changes.
