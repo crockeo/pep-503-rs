@@ -21,6 +21,13 @@ In the future I would like to:
       and their corresponding PEP503 concept.
 - [ ] Replace kuchiki with an actively-maintained [html5ever](https://github.com/servo/html5ever) sink.
 - [ ] Fuzz testing to find the many bugs I've included :)
+- [ ] Include changes specified in simple API-related PEPs:
+  - https://peps.python.org/pep-0592/
+  - https://peps.python.org/pep-0629/
+  - https://peps.python.org/pep-0658/
+  - https://peps.python.org/pep-0691/
+  - https://peps.python.org/pep-0700/
+
 
 ## Installation
 
